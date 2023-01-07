@@ -1,0 +1,19 @@
+.play-btn {
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px !important;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.4rem !important;
+    width: 200px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}

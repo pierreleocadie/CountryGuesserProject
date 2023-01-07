@@ -1,0 +1,57 @@
+@keyframes earth {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 0px;
+    }
+}
+
+@-moz-keyframes earth {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 0px;
+    }
+}
+
+@-webkit-keyframes earth {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 0px;
+    }
+}
+
+@-ms-keyframes earth {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 0px;
+    }
+}
+
+@-o-keyframes earth {
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 500px 0px;
+    }
+}
+
+.earth {
+    width: 60px;
+    height: 60px;
+    background: url("https://images.assetsdelivery.com/compings_v2/barks/barks2103/barks210300067.jpg");
+    border-radius: 50%;
+    background-size: 123px;
+
+    animation: 12s earth linear infinite;
+    -moz-animation: 12s earth linear infinite;
+    -webkit-animation: 12s earth linear infinite;
+    -o-animation: 12s earth linear infinite;
+}

@@ -1,0 +1,5 @@
+.fab-button:hover {
+    background-color: #f7f9f7;
+    cursor: pointer;
+    border-radius: 13px;
+}

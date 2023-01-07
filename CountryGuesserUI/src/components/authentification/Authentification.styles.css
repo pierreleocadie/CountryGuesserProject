@@ -1,0 +1,14 @@
+.connectionPaper {
+    padding: 20px;
+    width: 280px;
+    margin: 20px auto;
+}
+.connectionGrid {
+    text-align: center;
+}
+.connectionGrid h2 {
+    margin: 20px 0;
+}
+.connectionSubmit {
+    margin: 15px 0 !important;
+}

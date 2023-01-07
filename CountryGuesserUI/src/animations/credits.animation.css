@@ -1,0 +1,57 @@
+:root {
+    --start-position: 110%;
+    --end-position: -50%;
+    --animation-duration: 15s;
+}
+
+@keyframes credits {
+    0% {
+        top: var(--start-position);
+    }
+    100% {
+        top: var(--end-position);
+    }
+}
+
+@-moz-keyframes credits {
+    0% {
+        top: var(--start-position);
+    }
+    100% {
+        top: var(--end-position);
+    }
+}
+
+@-webkit-keyframes credits {
+    0% {
+        top: var(--start-position);
+    }
+    100% {
+        top: var(--end-position);
+    }
+}
+
+@-ms-keyframes credits {
+    0% {
+        top: var(--start-position);
+    }
+    100% {
+        top: var(--end-position);
+    }
+}
+
+@-o-keyframes credits {
+    0% {
+        top: var(--start-position);
+    }
+    100% {
+        top: var(--end-position);
+    }
+}
+
+.credits {
+    animation: var(--animation-duration) credits linear infinite;
+    -moz-animation: var(--animation-duration) credits linear infinite;
+    -webkit-animation: var(--animation-duration) credits linear infinite;
+    -o-animation: var(--animation-duration) credits linear infinite;
+}
