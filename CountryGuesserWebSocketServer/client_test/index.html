@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="login">
+        <h1>Login</h1>
+        <div id="loginError"></div>
+        <form id="loginForm" action="">
+            <input type="text" placeholder="Nickname or email" id="nickname_email" name="nickname_email">
+            <input type="password" placeholder="Password" name="password" id="password">
+            <button type="submit" id="connection" name="connection">Login</button>
+        </form>
+    </div>
+    <div id="register">
+        <h1>Register</h1>
+        <div id="registerError"></div>
+        <form id="registerForm" action="">
+            <input type="text" placeholder="Nickname" id="nickname" name="nickname">
+            <input type="email" placeholder="Email" id="email" name="email">
+            <input type="password" placeholder="Password" id="password" name="password">
+            <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Password confirmation">
+            <button type="submit" id="register" name="register">Register</button>
+        </form>
+    </div>
+    <div id="home">
+        <h1>Home</h1>
+        <div id="playerData"></div>
+        <br/>
+        <div id="serverMessage"></div>
+        <div id="roundData"></div>
+        <div id="lastRoundInformation"></div>
+        <input type="text" name="roomSize" id="roomSize" placeholder="Room size">
+        <input type="text" name="maxRounds" id="maxRounds" placeholder="Max rounds">
+        <input type="text" name="playerResponse" id="playerResponse" placeholder="Player Response">
+        <button id="sendPlayerResponse">Send your Response</button>
+        <br/><br/>
+        <button id="logout">Logout</button>
+        <button id="searchMultiplayerGame">Search a game for 2 players</button>
+        <button id="cancelMultiplayerGame">Cancel Multiplayer Game</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

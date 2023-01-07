@@ -1,0 +1,63 @@
+-- THIS SQL SCRIPT IS USED WITH MYSQL
+DROP DATABASE IF EXISTS `CountryGuesserDB`;
+
+CREATE DATABASE IF NOT EXISTS `CountryGuesserDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+USE `CountryGuesserDB`;
+
+CREATE TABLE players (
+    player_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nickname VARCHAR(255) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    credential TEXT NULL
+);
+
+CREATE TABLE playersLeaderboard (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    player_id INTEGER UNIQUE NOT NULL,
+    games_won INTEGER NOT NULL DEFAULT 0,
+    games_played INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (player_id) REFERENCES players(player_id) ON DELETE CASCADE
+);
+
+CREATE TABLE playersGames (
+    game_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    winner_id INTEGER NULL,
+    nb_rounds INTEGER NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (winner_id) REFERENCES players(player_id) ON DELETE CASCADE
+);
+
+CREATE TABLE playersGamesParticipants (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    game_id INTEGER NOT NULL,
+    player_id INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (game_id) REFERENCES playersGames(game_id) ON DELETE CASCADE,
+    FOREIGN KEY (player_id) REFERENCES players(player_id) ON DELETE CASCADE
+);
+
+CREATE TABLE playersGamesRounds (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    game_id INTEGER NOT NULL,
+    round_id INTEGER NOT NULL,
+    response VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (game_id) REFERENCES playersGames(game_id) ON DELETE CASCADE
+);
+
+CREATE TABLE playersGamesRoundsData (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    game_id INTEGER NOT NULL,
+    round_id INTEGER NOT NULL,
+    player_id INTEGER NOT NULL,
+    player_response VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (game_id) REFERENCES playersGames(game_id) ON DELETE CASCADE,
+    FOREIGN KEY (player_id) REFERENCES players(player_id) ON DELETE CASCADE
+);

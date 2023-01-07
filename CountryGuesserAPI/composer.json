@@ -1,0 +1,16 @@
+{
+    "name": "country-guesser/country-guesser",
+    "description": "Country Guesser game",
+    "autoload": {
+        "psr-4": {
+            "CountryGuesser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pierre Leocadie",
+            "email": "68948760+pierreleocadie@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
