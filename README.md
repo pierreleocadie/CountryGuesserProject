@@ -2,9 +2,9 @@
 
 ## Équipe
 
-Jordan Baumard
-Charles Hurst
-Pierre Leocadie
+- Jordan Baumard
+- Charles Hurst
+- Pierre Leocadie
 
 **Groupe : 209**
 
