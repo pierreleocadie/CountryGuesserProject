@@ -306,7 +306,7 @@ Paramétrage d’une redirection - Certificat SSL
 
 Ce qui nous permet par exemple d’accéder à PHPMyAdmin avec le lien suivant :
 [https://phpmyadmin.countryguesser.deletesystem32.fr/](https://phpmyadmin.countryguesser.deletesystem32.fr/) au lieu de [http://deletesystem32.fr:2817](http://deletesystem32.fr:2817/)
-ou encore de ce connecter au serveur websocket avec le lien suivant :
+ou encore de se connecter au serveur websocket avec le lien suivant :
 [ws://ws.countryguesser.deletesystem32.fr/](https://ws.countryguesser.deletesystem32.fr/)
 Cela a pour but de nous simplifier la tâche pour accéder à nos différents services mais également afin que ce soit plus lisible dans le code, sans que nous ayons à nous demander sur quel port avons nous héberger tel ou tel service.
 
